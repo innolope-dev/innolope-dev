@@ -48,7 +48,7 @@ CATS = [
         dict(slug="tinyworld", n="Tiny World", u="tinyworld.online", h="https://tinyworld.online", st=[("ok", "Live")],
              d="10,000 synthetic US residents built from IPUMS census microdata, with realistic links between income, education and occupation.", k=["Python", "pandas", "NumPy", "IPUMS"], crop="xMinYMid slice"),
         dict(slug="pulse", n="Innolope Pulse", u="innolope.com/pulse", h="https://innolope.com/pulse", st=[("ok", "Live")],
-             d="Startup data grouped into generated industry pages, with community voting.", k=["Next.js", "Express", "MongoDB"]),
+             d="Startup data grouped into generated industry pages, with community voting and its own MCP server.", k=["Next.js", "Express", "MongoDB", "MCP"]),
         dict(slug="techfeed", n="Techfeed", u="techfeed.online", h="https://techfeed.online", st=[("ok", "Live")],
              d="Checks newsrooms every ten minutes, matches keywords in any language and delivers to a feed, email or Telegram.", k=["Next.js", "Node", "Python"]),
     ]),
@@ -73,7 +73,7 @@ CATS = [
     ]),
 ]
 
-STATS = [("Products", "28", "shipped"), ("This year", "20", "launches"), ("App Store", "5", "apps shipped"), ("MCP", "4", "servers live"), ("Peanut", "772", "merged PRs")]
+STATS = [("Products", "28", "shipped"), ("This year", "20", "launches"), ("App Store", "5", "apps shipped"), ("MCP", "5", "servers live"), ("Peanut", "772", "merged PRs")]
 PHONES = [("ph_wowch", "Wowch"), ("ph_scoop", "Scoop"), ("ph_emilytics", "Emilytics"), ("ph_vibetown", "Vibetown"), ("ph_forkie", "Forkie")]
 CASES = [
     ("Bergman Memo", "long screen recordings that never lose the file",
@@ -130,7 +130,7 @@ def write(name, theme, content):
 
 # ---------- header: the store listing ----------
 HEADER_ALT = ("Slav, founding engineer, remote, open to founding-engineer roles. 28 products shipped, 20 in 2026, "
-              "5 apps shipped to the App Store, 4 MCP servers live, 772 merged PRs at Peanut.")
+              "5 apps shipped to the App Store, 5 MCP servers live, 772 merged PRs at Peanut.")
 
 
 def header(theme):
