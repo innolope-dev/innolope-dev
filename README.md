@@ -1,10 +1,10 @@
-<a href="https://innolope.com"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/header-dark.svg"><img src="assets/header-light.svg" alt="Slava, founding engineer: 28 launches, 20 in 2026, 5 App Store apps, 4 MCP servers"></picture></a>
+<a href="mailto:sf@innolope.com"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/header-dark.svg"><img src="assets/header-light.svg" alt="Slav, founding engineer: 28 launches, 20 in 2026, 5 App Store apps, 4 MCP servers"></picture></a>
 
 ## I take a product from empty repo to the App Store, then keep it running.
 
 Looking for a **founding or first-engineer role** on a small, fully remote team that ships fast. I've built mobile apps, AI tools with MCP servers, data pipelines and native Mac apps, and I handle security and payments work on a live fintech product.
 
-<a href="https://innolope.com"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/btn-contact-dark.svg"><img src="assets/btn-contact-light.svg" alt="Work with me"></picture></a>&nbsp;<a href="https://innolope.com"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/btn-site-dark.svg"><img src="assets/btn-site-light.svg" alt="innolope.com"></picture></a>
+<a href="mailto:sf@innolope.com"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/btn-contact-dark.svg"><img src="assets/btn-contact-light.svg" alt="Email me about a role: sf@innolope.com"></picture></a>&nbsp;<a href="https://www.linkedin.com/in/slavikfokin/"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/btn-linkedin-dark.svg"><img src="assets/btn-linkedin-light.svg" alt="LinkedIn"></picture></a>&nbsp;<a href="https://innolope.com"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/btn-site-dark.svg"><img src="assets/btn-site-light.svg" alt="innolope.com"></picture></a>
 
 <picture><source media="(prefers-color-scheme: dark)" srcset="assets/why-dark.svg"><img src="assets/why-light.svg" alt="20 launches in 2026, 5 apps live on the App Store, 4 MCP servers in production"></picture>
 
@@ -102,4 +102,6 @@ Production code that moves real money, on web and native.
 
 **Hiring your first engineers?** Small team, remote, lots of ownership: that's the job I'm looking for.
 
-<a href="https://innolope.com"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/btn-contact-dark.svg"><img src="assets/btn-contact-light.svg" alt="Work with me"></picture></a>
+<a href="mailto:sf@innolope.com"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/btn-contact-dark.svg"><img src="assets/btn-contact-light.svg" alt="Email me about a role: sf@innolope.com"></picture></a>&nbsp;<a href="https://www.linkedin.com/in/slavikfokin/"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/btn-linkedin-dark.svg"><img src="assets/btn-linkedin-light.svg" alt="LinkedIn"></picture></a>
+
+sf@innolope.com · [linkedin.com/in/slavikfokin](https://www.linkedin.com/in/slavikfokin/)

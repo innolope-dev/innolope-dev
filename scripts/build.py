@@ -128,7 +128,7 @@ def header(theme):
              '<radialGradient id="g2" cx="75%" cy="75%" r="60%"><stop offset="0" stop-color="#4493f8"/><stop offset="1" stop-color="#4493f8" stop-opacity="0"/></radialGradient></defs>')
     b.append(f'<rect x="{P}" y="{P}" width="96" height="96" rx="24" fill="#1b1f24"/><rect x="{P}" y="{P}" width="96" height="96" rx="24" fill="url(#g1)"/>'
              f'<rect x="{P}" y="{P}" width="96" height="96" rx="24" fill="url(#g2)"/>' + t(P + 48, P + 63, "S", 44, "#ffffff", 700, "middle"))
-    b.append(t(P + 116, P + 34, "Slava", 30, c["fg"], 700))
+    b.append(t(P + 116, P + 34, "Slav", 30, c["fg"], 700))
     b.append(t(P + 116, P + 60, "Founding engineer · ships end to end", 16, c["muted"]))
     b.append(t(P + 116, P + 84, "Innolope LLC", 15, c["link"]))
     b.append(f'<rect x="{W-P-104}" y="{P+30}" width="104" height="36" rx="18" fill="#0a84ff"/>' + t(W - P - 52, P + 54, "HIRE", 16, "#ffffff", 700, "middle", extra=' letter-spacing="1"'))
@@ -157,7 +157,7 @@ def header(theme):
                  + t(x + 12, y + ph_h - 14, label, 13, "#ffffff", 600))
     H = y + ph_h + P
     body = "".join(b).replace('height="H"', f'height="{H-1}"')
-    return svg(W, H, body, "Slava, founding engineer. 28 launches since 2016, 20 in 2026, 5 App Store apps, 4 MCP servers, 772 merged fintech PRs. App screens: Wowch, Scoop, Emilytics, Vibetown, Forkie.")
+    return svg(W, H, body, "Slav, founding engineer. 28 launches since 2016, 20 in 2026, 5 App Store apps, 4 MCP servers, 772 merged fintech PRs. App screens: Wowch, Scoop, Emilytics, Vibetown, Forkie.")
 
 
 # ---------- project cards ----------
@@ -290,7 +290,8 @@ def main():
         write("header", th, header(th))
         write("why", th, why(th))
         write("cadence", th, cadence(th))
-        write("btn-contact", th, button("Work with me →", th, True))
+        write("btn-contact", th, button("✉ Email me about a role", th, True))
+        write("btn-linkedin", th, button("LinkedIn", th, False))
         write("btn-site", th, button("innolope.com", th, False))
         for cat in CATS:
             if cat["cols"] == 1:
@@ -303,14 +304,16 @@ def main():
             for p in cat["items"]:
                 write(f'card-{p["slug"]}', th, card(p, th, W, lm, cat["cols"] == 3))
 
-    contact = "https://innolope.com"
+    contact = "mailto:sf@innolope.com"
+    linkedin = "https://www.linkedin.com/in/slavikfokin/"
     md = []
-    md.append(f'<a href="{contact}">{pic("header", "Slava, founding engineer: 28 launches, 20 in 2026, 5 App Store apps, 4 MCP servers")}</a>\n')
+    md.append(f'<a href="{contact}">{pic("header", "Slav, founding engineer: 28 launches, 20 in 2026, 5 App Store apps, 4 MCP servers")}</a>\n')
     md.append("## I take a product from empty repo to the App Store, then keep it running.\n")
     md.append("Looking for a **founding or first-engineer role** on a small, fully remote team that ships fast. "
               "I've built mobile apps, AI tools with MCP servers, data pipelines and native Mac apps, "
               "and I handle security and payments work on a live fintech product.\n")
-    md.append(pic("btn-contact", "Work with me", href=contact) + "&nbsp;" + pic("btn-site", "innolope.com", href="https://innolope.com") + "\n")
+    md.append(pic("btn-contact", "Email me about a role: sf@innolope.com", href=contact) + "&nbsp;" + pic("btn-linkedin", "LinkedIn", href=linkedin)
+              + "&nbsp;" + pic("btn-site", "innolope.com", href="https://innolope.com") + "\n")
     md.append(pic("why", "20 launches in 2026, 5 apps live on the App Store, 4 MCP servers in production") + "\n")
     md.append("### Projects by area\n")
     md.append(" · ".join(f'[{c["name"]}](#{anchor(c["name"])}) ({len(c["items"])})' for c in CATS) + "\n")
@@ -343,7 +346,8 @@ def main():
                   f"**Problem.** {prob}\n\n**Solution.** {sol}\n\n**Stack.** {stack}\n\n</details>\n")
     md.append("---\n")
     md.append("**Hiring your first engineers?** Small team, remote, lots of ownership: that's the job I'm looking for.\n")
-    md.append(pic("btn-contact", "Work with me", href=contact) + "\n")
+    md.append(pic("btn-contact", "Email me about a role: sf@innolope.com", href=contact) + "&nbsp;" + pic("btn-linkedin", "LinkedIn", href=linkedin) + "\n")
+    md.append("sf@innolope.com · [linkedin.com/in/slavikfokin](https://www.linkedin.com/in/slavikfokin/)\n")
     (ROOT / "README.md").write_text("\n".join(md))
     sizes = sum(f.stat().st_size for f in OUT.glob("*.svg"))
     print(f"{len(list(OUT.glob('*.svg')))} SVGs, {sizes // 1024} KB")
