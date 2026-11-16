@@ -24,16 +24,6 @@ THEMES = {
 }
 
 CATS = [
-    dict(id="mobile", name="Mobile apps", line="Expo and React Native apps on the App Store and Google Play.", cols=2, items=[
-        dict(slug="wowch", n="Wowch", u="wooowch.com", h="https://wooowch.com", st=[("ok", "App Store"), ("ok", "Google Play")],
-             d="Vertical video city guide: short reviews of places, filmed by locals and ranked by the community.", k=["Expo", "React Native", "Video", "Firebase"]),
-        dict(slug="vibetown", n="Vibetown", u="vibetown.pro", h="https://vibetown.pro", st=[("ok", "App Store"), ("ok", "Web")],
-             d="Job marketplace for developers who build with AI. SvelteKit web app, Expo app and a browser extension on one backend.", k=["SvelteKit", "Expo", "Node"]),
-        dict(slug="scoop", n="Scoop", u="App Store · Google Play", h="https://apps.apple.com/us/app/scoop-conversation-practice/id6828656782", st=[("ok", "App Store"), ("ok", "Google Play")],
-             d="Five-minute practice calls with a tough AI counterpart, then a scorecard of what to say next time.", k=["Expo", "Node", "LLM"]),
-        dict(slug="forkie", n="Forkie", u="4kie.com", h="https://4kie.com", st=[("ok", "Web"), ("wa", "App coming")],
-             d="1,360 recipes with a photo for every cooking step, produced by an image pipeline. Fridge Mode matches what you have.", k=["Expo", "RevenueCat", "Image pipeline"]),
-    ]),
     dict(id="ai", name="AI tools & MCP servers", line="Products that AI agents use directly over MCP.", cols=2, items=[
         dict(slug="cms", n="Innolope CMS", u="github.com/Innolope/innolope-cms", h="https://github.com/Innolope/innolope-cms", st=[("os", "Open source")],
              d="Headless CMS that agents write to over MCP. Markdown-native and self-hosted.", k=["TypeScript", "MCP", "PostgreSQL"]),
@@ -44,21 +34,31 @@ CATS = [
         dict(slug="documenda", n="Documenda", u="documenda.innolope.com", h="https://documenda.innolope.com", st=[("ok", "Live")],
              d="Workspace for contracts and policies: generated with Claude and Gemini, imported from PDF, DOCX and email.", k=["Node", "React", "Claude", "Gemini"]),
     ]),
-    dict(id="data", name="Data pipelines", line="Raw public data collected, cleaned and turned into products people search.", cols=3, items=[
-        dict(slug="tinyworld", n="Tiny World", u="tinyworld.online", h="https://tinyworld.online", st=[("ok", "Live")],
-             d="10,000 synthetic US residents built from IPUMS census microdata.", k=["Python", "pandas", "NumPy"]),
-        dict(slug="pulse", n="Innolope Pulse", u="innolope.com/pulse", h="https://innolope.com/pulse", st=[("ok", "Live")],
-             d="Startup data grouped into generated industry pages, with its own MCP server.", k=["Next.js", "MongoDB", "MCP"]),
-        dict(slug="techfeed", n="Techfeed", u="techfeed.online", h="https://techfeed.online", st=[("ok", "Live")],
-             d="Checks newsrooms every ten minutes and matches keywords in any language.", k=["Next.js", "Node", "Python"]),
+    dict(id="mobile", name="Mobile apps", line="Expo and React Native apps on the App Store and Google Play.", cols=2, items=[
+        dict(slug="wowch", n="Wowch", u="wooowch.com", h="https://wooowch.com", st=[("ok", "App Store"), ("ok", "Google Play")],
+             d="Vertical video city guide: short reviews of places, filmed by locals and ranked by the community.", k=["Expo", "React Native", "Video", "Firebase"]),
+        dict(slug="vibetown", n="Vibetown", u="vibetown.pro", h="https://vibetown.pro", st=[("ok", "App Store"), ("ok", "Web")],
+             d="Job marketplace for developers who build with AI. SvelteKit web app, Expo app and a browser extension on one backend.", k=["SvelteKit", "Expo", "Node"]),
+        dict(slug="scoop", n="Scoop", u="App Store · Google Play", h="https://apps.apple.com/us/app/scoop-conversation-practice/id6828656782", st=[("ok", "App Store"), ("ok", "Google Play")],
+             d="Five-minute practice calls with a tough AI counterpart, then a scorecard of what to say next time.", k=["Expo", "Node", "LLM"]),
+        dict(slug="forkie", n="Forkie", u="4kie.com", h="https://4kie.com", st=[("ok", "Web"), ("wa", "App coming")],
+             d="1,360 recipes with a photo for every cooking step, produced by an image pipeline. Fridge Mode matches what you have.", k=["Expo", "RevenueCat", "Image pipeline"]),
     ]),
-    dict(id="mac", name="Mac apps", line="Desktop apps for macOS: screen capture, messaging, menu bar.", cols=3, items=[
+    dict(id="data", name="Data pipelines", line="Raw public data collected, cleaned and turned into products people search.", cols=2, items=[
+        dict(slug="tinyworld", n="Tiny World", u="tinyworld.online", h="https://tinyworld.online", st=[("ok", "Live")],
+             d="10,000 synthetic US residents built from IPUMS census microdata, with realistic links between income, education and occupation.", k=["Python", "pandas", "NumPy", "IPUMS"], crop="xMinYMid slice"),
+        dict(slug="pulse", n="Innolope Pulse", u="innolope.com/pulse", h="https://innolope.com/pulse", st=[("ok", "Live")],
+             d="Startup data grouped into generated industry pages, with community voting and its own MCP server.", k=["Next.js", "Express", "MongoDB", "MCP"]),
+        dict(slug="techfeed", n="Techfeed", u="techfeed.online", h="https://techfeed.online", st=[("ok", "Live")],
+             d="Checks newsrooms every ten minutes, matches keywords in any language and delivers to a feed, email or Telegram.", k=["Next.js", "Node", "Python"]),
+    ]),
+    dict(id="mac", name="Mac apps", line="Desktop apps for macOS: screen capture, messaging, menu bar.", cols=2, items=[
         dict(slug="texterry", n="Texterry", u="texterry.com", h="https://texterry.com", st=[("ok", "macOS"), ("ok", "Windows")],
-             d="One inbox for Telegram, WhatsApp and Discord, with an AI assistant.", k=["Electron", "React", "MCP"]),
+             d="One inbox for Telegram, WhatsApp and Discord, with an AI assistant that reads while you're away and an MCP endpoint.", k=["Electron", "React", "Node", "MCP"]),
         dict(slug="bergman", n="Bergman Memo", u="bergman.digital", h="https://bergman.digital", st=[("wa", "Early access")],
-             d="Record your screen, camera and voice, then send a link instead of a meeting.", k=["Swift", "ScreenCaptureKit"]),
+             d="Record your screen, camera and voice, then send a link instead of booking a meeting. Comes with a virtual camera with live filters.", k=["Swift", "ScreenCaptureKit", "AVFoundation", "CMIO"]),
         dict(slug="limitfuel", n="LimitFuel", u="github.com/Innolope/LimitFuel", h="https://github.com/Innolope/LimitFuel", st=[("os", "Open source")],
-             d="Menu bar app for Claude and Codex usage limits, with Windows and Linux builds.", k=["Swift", "AppKit", "Rust"]),
+             d="Menu bar app for Claude and Codex usage limits. Signed and notarized, with Windows and Linux builds.", k=["Swift", "AppKit", "Rust"]),
     ]),
     dict(id="web", name="Web products", line="Consumer sites with search, catalogues and browser extensions.", cols=2, items=[
         dict(slug="jobalto", n="Jobalto", u="jobalto.com", h="https://jobalto.com", st=[("ok", "Live")],
@@ -69,7 +69,7 @@ CATS = [
     dict(id="fintech", name="Fintech & security", line="Production code that moves real money, on web and native.", cols=1, items=[
         dict(slug="peanut", n="Peanut", u="peanut.me", h="https://peanut.me", st=[("ok", "Live"), ("ok", "Contract engineer")],
              d="Payments app on web, iOS and Android. I work on security and auth: passkey sign-in, step-up auth on card and money-movement routes, biometric-guarded session tokens and server-side JWT revocation.",
-             k=["TypeScript", "Next.js", "Capacitor", "WebAuthn"], kpi=[("772", "merged PRs"), ("2", "repos: app + API")]),
+             k=["TypeScript", "Next.js", "Capacitor", "WebAuthn"], crop="xMinYMid slice", kpi=[("772", "merged PRs"), ("2", "repos: app + API")]),
     ]),
 ]
 
@@ -204,7 +204,7 @@ def wide_card(p, theme):
     W, H, iw, pad = 880, 300, 440, 22
     b = [f'<clipPath id="c"><rect width="{W}" height="{H}" rx="12"/></clipPath>',
          f'<g clip-path="url(#c)"><rect width="{W}" height="{H}" fill="{c["bg"]}"/>'
-         f'<image href="{img(p["slug"])}" x="0" y="0" width="{iw}" height="{H}" preserveAspectRatio="xMinYMid slice"/>'
+         f'<image href="{img(p["slug"])}" x="0" y="0" width="{iw}" height="{H}" preserveAspectRatio="{p.get("crop", "xMidYMin slice")}"/>'
          f'<line x1="{iw}" y1="0" x2="{iw}" y2="{H}" stroke="{c["line"]}"/></g>']
     x, y = iw + pad, 44
     b.append(t(x, y, p["n"], 22, c["fg"], 700))
@@ -219,7 +219,9 @@ def wide_card(p, theme):
         b.append(t(x, y, ln, 14, c["muted"]))
     y += 40
     kx = x
-    for v, l in p["kpi"]:
+    if not p.get("kpi"):
+        y -= 40
+    for v, l in p.get("kpi", []):
         b.append(t(kx, y, v, 26, c["fg"], 700) + t(kx, y + 18, l, 12, c["muted"]))
         kx += 150
     y += 40
@@ -278,6 +280,11 @@ def pic(name, alt, width=None, href=None):
     return f'<a href="{href}">{p}</a>' if href else p
 
 
+def split(items):
+    """Two-column grid; an odd one out (the first item) gets a full-width card."""
+    return (items[:1], items[1:]) if len(items) % 2 else ([], items)
+
+
 def anchor(name):
     return "".join(ch for ch in name.lower().replace(" ", "-") if ch.isalnum() or ch == "-")
 
@@ -294,15 +301,16 @@ def main():
         write("btn-linkedin", th, button("LinkedIn", th, False))
         write("btn-site", th, button("innolope.com", th, False))
         for cat in CATS:
-            if cat["cols"] == 1:
-                for p in cat["items"]:
-                    write(f'card-{p["slug"]}', th, wide_card(p, th))
+            wide, grid = split(cat["items"])
+            for p in wide:
+                write(f'card-{p["slug"]}', th, wide_card(p, th))
+            if not grid:
                 continue
-            W = 432 if cat["cols"] == 2 else 286
-            chars = int((W - 32) / ((13 if cat["cols"] == 3 else 13.5) * 0.52))
-            lm = max(len(wrap(p["d"], chars)) for p in cat["items"])
-            for p in cat["items"]:
-                write(f'card-{p["slug"]}', th, card(p, th, W, lm, cat["cols"] == 3))
+            W = 432
+            chars = int((W - 32) / (13.5 * 0.52))
+            lm = max(len(wrap(p["d"], chars)) for p in grid)
+            for p in grid:
+                write(f'card-{p["slug"]}', th, card(p, th, W, lm, False))
 
     contact = "mailto:sf@innolope.com"
     linkedin = "https://www.linkedin.com/in/slavikfokin/"
@@ -320,9 +328,10 @@ def main():
     for cat in CATS:
         md.append(f'### {cat["name"]}\n')
         md.append(f'{cat["line"]}\n')
-        width = {1: "100%", 2: "49%", 3: "32%"}[cat["cols"]]
-        cards = [pic(f'card-{p["slug"]}', f'{p["n"]}: {p["d"]}', width, p["h"]) for p in cat["items"]]
-        rows = [cards[i:i + cat["cols"]] for i in range(0, len(cards), cat["cols"])]
+        wide, grid = split(cat["items"])
+        rows = [[pic(f'card-{p["slug"]}', f'{p["n"]}: {p["d"]}', "98.4%", p["h"])] for p in wide]
+        cards = [pic(f'card-{p["slug"]}', f'{p["n"]}: {p["d"]}', "49%", p["h"]) for p in grid]
+        rows += [cards[i:i + 2] for i in range(0, len(cards), 2)]
         md.append('<p align="left">\n' + "\n".join(" ".join(r) + "<br>" for r in rows) + "\n</p>\n")
     md.append("### Shipping cadence\n")
     md.append(pic("cadence", "Launches per month, July 2025 to October 2026") + "\n")
